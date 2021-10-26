@@ -38,6 +38,7 @@
         * 클라이언트가 성능의 요구에 따라 결정할 수 있다. 
     * gRPC Client 는 client side load balancing을 할 수 있다.
 * gRPC VS REST
+
 |gRPC|REST|
 |---|---|
 |Protocol Buffer (small, fast)|JSON (text based, slow, big)|
