@@ -45,6 +45,5 @@
 |Bidirectional & Async|Client => Server requests only|
 |Stream support|Request / Response support only|
 |API Oriented - “What”|CRUD Oriented|
-|Code Generation through Protocol Buffers in any language (1st class citizen)|Code generation through OpenAPI / Swagger (add-on) (2nd class citizen)|
+|Code Generation through Protocol Buffers in any language (1st class citizen)|Code generation through OpenAPI or Swagger (add-on) (2nd class citizen)|
 |RPC Based|HTTP verbs based|
-
