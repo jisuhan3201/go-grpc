@@ -38,13 +38,13 @@
         * 클라이언트가 성능의 요구에 따라 결정할 수 있다. 
     * gRPC Client 는 client side load balancing을 할 수 있다.
 * gRPC VS REST
-|gRPC   |REST   |
-|---------|---------|
-|Protocol Buffer (small, fast)   |JSON (text based, slow, big)   |
-|HTTP/2 (lower latency)   |HTTP/1.1 (higher latency)   |
-|Bidirectional & Async   |Client => Server requests only   |
-|Stream support   |Request / Response support only   |
-|API Oriented - “What”   |CRUD Oriented   |
-|Code Generation through Protocol Buffers in any language (1st class citizen)   |Code generation through OpenAPI / Swagger (add-on) (2nd class citizen)   |
-|RPC Based   |HTTP verbs based   |
+|gRPC|REST|
+|---|---|
+|Protocol Buffer (small, fast)|JSON (text based, slow, big)|
+|HTTP/2 (lower latency)|HTTP/1.1 (higher latency)|
+|Bidirectional & Async|Client => Server requests only|
+|Stream support|Request / Response support only|
+|API Oriented - “What”|CRUD Oriented|
+|Code Generation through Protocol Buffers in any language (1st class citizen)|Code generation through OpenAPI / Swagger (add-on) (2nd class citizen)|
+|RPC Based|HTTP verbs based|
 
