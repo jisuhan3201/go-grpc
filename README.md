@@ -26,10 +26,19 @@
         * 기존 방식과 같이 한번 요청하면 한번 응답
     * Server Streaming
         * 클라이언트가 한번 요청하면 서버가 스트리밍 처럼 여러번 응답한다.
+        * 서버가 많은 데이터를 보내야 할 때
+        * 서버가 클라이언트 요청 없이 푸쉬 해야 할 때
     * Client Streaming
-        * 클라이언트가 스트리밍하게 보내고 마지막에 서버가 응답
+        * 클라이언트가 스트리밍하게 보내고 마지막에 서버가 응답(서버가 언제 응답할지는 구현에 따라 다르다)
+        * 클라이언트가 많은 데이터를 보내야 할 때
+        * 서버가 무거운 것(expensive)을 처리해야 할 때
+        * 클라이언트가 서버의 응답을 기대하지 않아도 될 때 
     * Bi Directional Streaming
         * 양방향 스트리밍
+        * 요청과 응답의 갯수가 일치하지 않아도 된다
+        * client 와  server가 서로 많은 데이터를 비동기적으로 보내야 할 때 
+        * 채팅 구현 유용
+        * 커넥션이 길게 연결되어야 할 때 유용
 * Scalability in gRPC
     * gRPC 서버는 기본값이 비동기식이다.
         * 요청시 스레드를 block하지 않는다.
@@ -48,3 +57,12 @@
 |API Oriented - “What”|CRUD Oriented|
 |Code Generation through Protocol Buffers in any language (1st class citizen)|Code generation through OpenAPI or Swagger (add-on) (2nd class citizen)|
 |RPC Based|HTTP verbs based|
+
+* Handle errors
+    * HTTP/1.1 error handling의 문제점
+        * 200 ~ 500 번대 까지 너무 많은 에러가 존재
+        * 모호한 에러들이 있어 많은 사용자들이 잘못 사용
+    * gRPC는 훨씬 적은 종류의 에러를 가짐
+    * 참고
+        * [https://www.grpc.io/docs/guides/error/](https://www.grpc.io/docs/guides/error/)
+        * [https://avi.im/grpc-errors/](https://avi.im/grpc-errors/)
