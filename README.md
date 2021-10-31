@@ -75,3 +75,12 @@
     * 기존 REST API 정의와 같이 어떤 인터페이스를 제공하는지 알려준다.
     * [https://github.com/grpc/grpc-go/tree/master/reflection](https://github.com/grpc/grpc-go/tree/master/reflection)
     * [https://github.com/ktr0731/evans](https://github.com/ktr0731/evans)
+* How google uses the gRPC
+    * [https://github.com/googleapis/googleapis/blob/master/google/pubsub/v1/pubsub.proto](https://github.com/googleapis/googleapis/blob/master/google/pubsub/v1/pubsub.proto)
+    * [gRPC Gateway](https://github.com/grpc-ecosystem/grpc-gateway)
+* Something useful
+    * [gogo](https://github.com/gogo/protobuf)
+    * [gogoproto-blog](https://jbrandhorst.com/post/gogoproto/)
+* Reference
+    * [https://www.udemy.com/course/grpc-golang/](https://www.udemy.com/course/grpc-golang/)
+    * Kasun Indrasiri && Danesh Kuruppu, E 2020, gRPC Up & Running, O'Reily Media
