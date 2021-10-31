@@ -71,5 +71,7 @@
     * 서버측에서는 Deadline을 체크하고 초과 되었을 경우 현재 돌고 있는 것을 취소해야한다.
     * Deadline are propagated across if gRPC calls are chained
         * A => B => C (deadline for A is passed to B and then passed to C)
-* SSL Encryption
-    * 
+* Reflection & Evans CLI
+    * 기존 REST API 정의와 같이 어떤 인터페이스를 제공하는지 알려준다.
+    * [https://github.com/grpc/grpc-go/tree/master/reflection](https://github.com/grpc/grpc-go/tree/master/reflection)
+    * [https://github.com/ktr0731/evans](https://github.com/ktr0731/evans)
