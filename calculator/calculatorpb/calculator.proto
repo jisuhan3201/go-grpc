@@ -33,7 +33,7 @@ message FindMaximumRequest {
 }
 
 message FindMaximumResponse {
-    int32 number=1;
+    int32 maximum=1;
 }
 
 message SquareRootRequest {
@@ -46,17 +46,17 @@ message SquareRootResponse {
 
 service CalculatorService {
     // Unary
-    rpc Sum(SumRequest) returns (SumResponse){};
+    rpc Sum(SumRequest) returns (SumResponse);
     // Server Streaming
-    rpc Decompose(PrimeDecompositionRequest) returns (stream PrimeDecompositionResponse){};
+    rpc Decompose(PrimeDecompositionRequest) returns (stream PrimeDecompositionResponse);
     // Client Streaming
-    rpc ComputeAverage(stream ComputeAverageRequest) returns (ComputeAverageReponse) {};
+    rpc ComputeAverage(stream ComputeAverageRequest) returns (ComputeAverageReponse);
 
     // BiDi Streaming
-    rpc FindMaximum(stream FindMaximumRequest) returns (stream FindMaximumResponse) {};
+    rpc FindMaximum(stream FindMaximumRequest) returns (stream FindMaximumResponse);
 
     // error handling
     // this RPC will throw an exception if the sent number is negative
     // the error being sent is of the type INVALID_ARGUMENT
-    rpc SquareRoot(SquareRootRequest) returns (SquareRootResponse){};
+    rpc SquareRoot(SquareRootRequest) returns (SquareRootResponse);
 }

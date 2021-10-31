@@ -66,3 +66,10 @@
     * 참고
         * [https://www.grpc.io/docs/guides/error/](https://www.grpc.io/docs/guides/error/)
         * [https://avi.im/grpc-errors/](https://avi.im/grpc-errors/)
+* Deadlines
+    * gRPC doc에서는 모든 클라이언트측 호출에서 Deadline을 설정하길 추천한다.
+    * 서버측에서는 Deadline을 체크하고 초과 되었을 경우 현재 돌고 있는 것을 취소해야한다.
+    * Deadline are propagated across if gRPC calls are chained
+        * A => B => C (deadline for A is passed to B and then passed to C)
+* SSL Encryption
+    * 
